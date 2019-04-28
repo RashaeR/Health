@@ -1,0 +1,21 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.button:hover
+{
+    -fx-cursor:hand; 
+    -fx-font-weight:bold;
+}
+
+/*#loginButton:hover
+{   -fx-cursor:hand; 
+    -fx-font-weight:bold;
+    
+}
+For learning purpose
+*/

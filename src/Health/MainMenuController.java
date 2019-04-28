@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package health;
+package Health;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
  *
  * @author Rashae
  */
-public class LoginController implements Initializable {
+public class MainMenuController implements Initializable {
 
     /**
      * Initializes the controller class.
