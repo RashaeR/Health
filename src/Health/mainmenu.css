@@ -1,7 +1,8 @@
-/*
- * Empty Stylesheet file.
- */
-
-.mainFxmlClass {
-
+HBox:hover
+{   
+    -fx-cursor:hand; 
+    -fx-font-weight:bold;
+    -fx-background-color:#B3E5FC;
+    -fx-opacity:.80;
 }
+

@@ -31,8 +31,8 @@ public class Health extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
-        primaryStage.setMaximized(true);
         primaryStage.show();
+        
     }
     /**
      * @param args the command line arguments

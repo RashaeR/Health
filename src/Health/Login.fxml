@@ -45,7 +45,7 @@
             <Insets left="10.0" />
          </padding>
       </HBox>
-      <Button fx:id="loginButton" layoutX="310.0" layoutY="216.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" style="-fx-background-radius: 5px;" text="Login">
+      <Button fx:id="loginButton" layoutX="310.0" layoutY="216.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#mainMenu" prefHeight="30.0" prefWidth="90.0" style="-fx-background-radius: 5px;" text="Login">
          <font>
             <Font size="14.0" />
          </font>
