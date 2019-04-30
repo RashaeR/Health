@@ -4,5 +4,10 @@ HBox:hover
     -fx-font-weight:bold;
     -fx-background-color:#B3E5FC;
     -fx-opacity:.80;
+ 
 }
 
+#icon
+{
+    size:3em;
+}

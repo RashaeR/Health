@@ -19,7 +19,7 @@
       </Label>
       <HBox alignment="CENTER_LEFT" layoutX="100.0" layoutY="105.0" prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: #BEBFC1; -fx-background-radius: 5px; -fx-border-radius: 5px;">
          <children>
-            <FontAwesomeIcon glyphStyle="-fx-fill:#BEBFC1" iconName="ENVELOPE" size="1.2em" />
+            <FontAwesomeIcon glyphStyle="-fx-fill:#BEBFC1" iconName="USER" size="1.2em" />
             <TextField promptText="User Name" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="14.0" />

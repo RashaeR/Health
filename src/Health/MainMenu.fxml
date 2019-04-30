@@ -11,7 +11,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #BDBDBD;" stylesheets="@mainmenu.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <left>
-      <VBox prefHeight="400.0" prefWidth="157.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+      <VBox prefHeight="400.0" prefWidth="157.0" spacing="5.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Main Menu" textAlignment="CENTER" wrappingWidth="160.7470703125">
                <font>
@@ -29,12 +29,72 @@
                   <Insets top="10.0" />
                </padding>
                <children>
-                  <FontAwesomeIcon translateX="10.0" translateY="2.0">
+                  <FontAwesomeIcon id="icon" fx:id="icon" iconName="USERS" translateX="10.0" translateY="2.0">
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>
                   </FontAwesomeIcon>
                   <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="37.0" prefWidth="174.0" style="-fx-background-color: transparent;" text="Register Doctor" translateX="-6.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="-5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="38.0" prefHeight="15.0" prefWidth="128.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <children>
+                  <FontAwesomeIcon iconName="USERS" translateX="10.0" translateY="2.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="37.0" prefWidth="174.0" style="-fx-background-color: transparent;" text="Register Patient" translateX="-6.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="-5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="73.0" prefHeight="15.0" prefWidth="128.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <children>
+                  <FontAwesomeIcon iconName="USERS" translateX="10.0" translateY="2.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="37.0" prefWidth="174.0" style="-fx-background-color: transparent;" text="Appointments" translateX="-6.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="-5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="108.0" prefHeight="15.0" prefWidth="128.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <children>
+                  <FontAwesomeIcon iconName="USERS" translateX="10.0" translateY="2.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="37.0" prefWidth="174.0" style="-fx-background-color: transparent;" text="Calendar" translateX="-6.0">
                      <HBox.margin>
                         <Insets bottom="5.0" top="-5.0" />
                      </HBox.margin>
