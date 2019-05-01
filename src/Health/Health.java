@@ -23,13 +23,13 @@ public class Health extends Application {
     
     @Override
     public void start(Stage primaryStage) throws Exception {
-       login(primaryStage);
+       showLogin(primaryStage);
     }
 
-    public void login(Stage primaryStage) throws Exception
+    public void showLogin(Stage primaryStage) throws Exception
     {
-        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-        Scene scene = new Scene(root);
+        Parent login = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        Scene scene = new Scene(login);
         primaryStage.setScene(scene);
         primaryStage.show();
         
