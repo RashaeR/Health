@@ -38,14 +38,20 @@ public class LoginController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) 
     {
-
+        
     } 
-    public void test(ActionEvent event) throws Exception
-    {
+    
+    public void showMenu(ActionEvent event ) throws Exception
+    {          
+        DataBase data = new DataBase();
         BorderPane mainMenu = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Parent mainInnerMenu = FXMLLoader.load(getClass().getResource("MainInnerMenu.fxml"));
         
-        mainMenu.setCenter(mainInnerMenu);
+        //If both user and password match continues to next screen
+        if (data.validate(userText, passwordText).next())
+        {
+            
+            mainMenu.setCenter(mainInnerMenu);
             
             Scene scene = new Scene(mainMenu);
         
@@ -53,27 +59,9 @@ public class LoginController implements Initializable {
             stage.hide();
             stage.setScene(scene);
             stage.show();
-    }
-    
-    public void showMenu(ActionEvent event ) throws Exception
-    {          
-        DataBase data = new DataBase();
-//        BorderPane mainMenu = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
-//        Parent mainInnerMenu = FXMLLoader.load(getClass().getResource("MainInnerMenu.fxml"));
-        
-        
-        if (data.validate(userText, passwordText).next())
-        {
-            test(event);
-//            mainMenu.setCenter(mainInnerMenu);
-//            
-//            Scene scene = new Scene(mainMenu);
-//        
-//            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-//            stage.hide();
-//            stage.setScene(scene);
-//            stage.show();
+            
         }
+        //Gives warning that input information is incorrect
         else
         {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -89,8 +77,7 @@ public class LoginController implements Initializable {
                         passwordText.setText("");
                 }
         }
-        
-        
+          
     }
     
 }

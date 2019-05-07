@@ -34,7 +34,7 @@ public class DataBase
             e.printStackTrace();   
         }
     }
-    
+    //Checks if input matches database
     public ResultSet validate(TextField userName, PasswordField pass)
     {   ResultSet resultSet = null;
         try{
@@ -45,25 +45,28 @@ public class DataBase
         
         pst.setString(1, userName.getText());
         pst.setString(2, pass.getText());
-       resultSet = pst.executeQuery();
+        resultSet = pst.executeQuery();
        
-//        if(resultSet.next())
-//        {
-//            System.out.println("Matched");
-//          
-//        }
-//        else{
-//            System.out.println("Not Matched");
-//            userName.setText("");
-//            pass.setText("");
-//        }
-//        connect.close();
         }
     catch(Exception e)
     {
         
     }
     return resultSet; 
+    }
+    
+    public void setDoctor(TextField fName, TextField mName, TextField lName,
+            TextField email, TextField cell, TextField home, TextField address,
+            TextField city, TextField state, TextField zip) throws Exception
+    {
+        String sql = "insert into doctor (Fname, MName, LName, Email, Cellphone, "
+                + "Homephone, Address, City, State, Zip) values ('"+fName.getText()+"','"
+                + mName.getText()+"','"+lName.getText()+"','"+email.getText()+"','"
+                + cell.getText()+"','"+home.getText()+"','"+address.getText()+"','"
+                + city.getText()+"','"+state.getText()+"','"+zip.getText()+"')";
+        pst = connect.prepareStatement(sql);
+        pst.executeUpdate(sql);
+       
     }
     
   

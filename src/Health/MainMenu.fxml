@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #BDBDBD;" stylesheets="@mainmenu.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #BDBDBD;" stylesheets="@mainmenu.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Health.MainMenuController">
    <left>
       <VBox prefHeight="400.0" prefWidth="157.0" spacing="5.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
          <children>
@@ -34,7 +34,7 @@
                         <Insets left="5.0" />
                      </HBox.margin>
                   </FontAwesomeIcon>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="37.0" prefWidth="174.0" style="-fx-background-color: transparent;" text="Register Doctor" translateX="-6.0">
+                  <Button fx:id="registerDocButton" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#showRegisterDoctor" prefHeight="37.0" prefWidth="174.0" style="-fx-background-color: transparent;" text="Register Doctor" translateX="-6.0">
                      <HBox.margin>
                         <Insets bottom="5.0" top="-5.0" />
                      </HBox.margin>
