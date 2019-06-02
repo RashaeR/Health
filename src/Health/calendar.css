@@ -1,0 +1,40 @@
+#leftButtonWithImage{
+    -fx-background-image: url('../images/shadedDark24.png');
+    -fx-background-size: 25px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+#rightButtonWithImage{
+    -fx-background-image: url('../images/shadedDark25.png');
+    -fx-background-size: 25px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+.button{
+    -fx-background-color: transparent;
+}
+.button:hover
+{
+     -fx-cursor:hand; 
+}
+
+.root {
+    -fx-padding: 20 ;
+    -fx-background-color: white;
+    -fx-border-color: black;
+}
+.grid {
+    /* 1 pixel border around the top and right of the grid: */
+    -fx-border-color: black;
+    -fx-background-insets: 0, 1 1 0 0;
+    -fx-padding: 1 ;
+}
+.cell {
+    /* 1 pixel border around the left and bottom of each cell: */
+    -fx-border-color: black;
+    -fx-background-size: 300px 100px;
+    -fx-background-color: white;
+    -fx-background-insets: 0, 0 0 1 1 ;
+}

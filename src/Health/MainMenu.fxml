@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #BDBDBD;" stylesheets="@mainmenu.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Health.MainMenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #BDBDBD;" stylesheets="@mainmenu.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Health.MainMenuController">
    <left>
       <VBox prefHeight="400.0" prefWidth="157.0" spacing="5.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
          <children>
@@ -21,6 +21,26 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </Text>
+            <HBox layoutX="10.0" layoutY="108.0" prefHeight="15.0" prefWidth="128.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <children>
+                  <FontAwesomeIcon iconName="USERS" translateX="10.0" translateY="2.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#showAppointments" prefHeight="37.0" prefWidth="174.0" style="-fx-background-color: transparent;" text="Appointment" translateX="-6.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="-5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
             <HBox prefHeight="15.0" prefWidth="128.0">
                <opaqueInsets>
                   <Insets />
@@ -54,7 +74,27 @@
                         <Insets left="5.0" />
                      </HBox.margin>
                   </FontAwesomeIcon>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="37.0" prefWidth="174.0" style="-fx-background-color: transparent;" text="Register Patient" translateX="-6.0">
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#showRegisterPatient" prefHeight="37.0" prefWidth="174.0" style="-fx-background-color: transparent;" text="Register Patient" translateX="-6.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="-5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="123.0" prefHeight="15.0" prefWidth="128.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <children>
+                  <FontAwesomeIcon iconName="USERS" translateX="10.0" translateY="2.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#showUser" prefHeight="37.0" prefWidth="174.0" style="-fx-background-color: transparent;" text="User" translateX="-6.0">
                      <HBox.margin>
                         <Insets bottom="5.0" top="-5.0" />
                      </HBox.margin>
@@ -74,27 +114,7 @@
                         <Insets left="5.0" />
                      </HBox.margin>
                   </FontAwesomeIcon>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="37.0" prefWidth="174.0" style="-fx-background-color: transparent;" text="Appointments" translateX="-6.0">
-                     <HBox.margin>
-                        <Insets bottom="5.0" top="-5.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-            </HBox>
-            <HBox layoutX="10.0" layoutY="108.0" prefHeight="15.0" prefWidth="128.0">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-               <children>
-                  <FontAwesomeIcon iconName="USERS" translateX="10.0" translateY="2.0">
-                     <HBox.margin>
-                        <Insets left="5.0" />
-                     </HBox.margin>
-                  </FontAwesomeIcon>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="37.0" prefWidth="174.0" style="-fx-background-color: transparent;" text="Calendar" translateX="-6.0">
+                  <Button fx:id="viewButton" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#showView" prefHeight="37.0" prefWidth="174.0" style="-fx-background-color: transparent;" text="View " translateX="-6.0">
                      <HBox.margin>
                         <Insets bottom="5.0" top="-5.0" />
                      </HBox.margin>

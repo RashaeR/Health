@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Health.jnlp">
+  <information>
+    <title>Health</title>
+    <vendor>Rashae</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Health.jar" size="42063" download="eager" />
+    <jar href="lib\charm-glisten-4.4.1.jar" size="1040787" download="eager" />
+    <jar href="lib\controlsfx-8.40.12.jar" size="996389" download="eager" />
+    <jar href="lib\fontawesomefx-8.1.jar" size="179086" download="eager" />
+    <jar href="lib\fxiconics-0.0.5-jfx.jar" size="375168" download="eager" />
+    <jar href="lib\jfoenix-8.0.8.jar" size="2708772" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.16.jar" size="2293144" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="Health.Health"  name="Health" />
+  <update check="always"/>
+</jnlp>

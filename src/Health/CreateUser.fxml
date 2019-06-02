@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,13 +14,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: white;" stylesheets="@registerdoctor.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Health.RegisterDoctorController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Health.CreateUserController">
+    <stylesheets>
+        <URL value="@createuser.css" />
+    </stylesheets>
    <children>
-      <VBox prefHeight="454.0" prefWidth="500.0" spacing="15.0">
+      <VBox prefHeight="500.0" prefWidth="315.0" spacing="15.0">
          <children>
-            <HBox prefHeight="25.0" prefWidth="222.0" spacing="20.0" stylesheets="@registerdoctor.css">
+            <HBox layoutX="20.0" layoutY="50.0" prefHeight="25.0" prefWidth="338.0" spacing="5.0" stylesheets="@registerdoctor.css">
                <children>
-                  <Label text="Name:">
+                  <Label prefHeight="25.0" prefWidth="51.0" text="User:">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -25,24 +31,59 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField fx:id="firstNameText" onKeyTyped="#nameRestriction" prefHeight="25.0" prefWidth="103.0" promptText="First Name">
+                  <TextField fx:id="idText" onKeyTyped="#nameRestriction" prefHeight="25.0" prefWidth="160.0" promptText="ID">
                      <HBox.margin>
-                        <Insets left="12.0" />
+                        <Insets left="22.0" />
                      </HBox.margin>
                   </TextField>
-                  <TextField fx:id="middleText" prefHeight="25.0" prefWidth="29.0" promptText="MI">
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="30.0" prefHeight="25.0" prefWidth="338.0" spacing="5.0" stylesheets="@registerdoctor.css">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="74.0" text="Password:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
                      <HBox.margin>
-                        <Insets left="5.0" />
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="passwordText" onKeyTyped="#nameRestriction" prefHeight="25.0" prefWidth="158.0" promptText="Password">
+                     <HBox.margin>
+                        <Insets />
                      </HBox.margin>
                   </TextField>
-                  <TextField fx:id="lastNameText" onKeyTyped="#nameRestriction" prefHeight="25.0" prefWidth="116.0" promptText="Last Name">
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="25.0" prefWidth="338.0" spacing="5.0" stylesheets="@registerdoctor.css">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="51.0" text="Name:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
                      <HBox.margin>
-                        <Insets left="8.0" />
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="firstNameText" onAction="#nameRestriction" onKeyTyped="#nameRestriction" prefHeight="25.0" prefWidth="103.0" promptText="First Name">
+                     <HBox.margin>
+                        <Insets left="22.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="lastNameText" onKeyTyped="#nameRestriction" prefHeight="25.0" prefWidth="95.0" promptText="Last Name">
+                     <HBox.margin>
+                        <Insets />
                      </HBox.margin>
                   </TextField>
                </children>
                <VBox.margin>
-                  <Insets left="28.0" />
+                  <Insets left="10.0" />
                </VBox.margin>
             </HBox>
             <HBox prefHeight="25.0" prefWidth="198.0" spacing="10.0">
@@ -64,7 +105,7 @@
                   <TextField fx:id="yDate" layoutX="156.0" layoutY="10.0" onKeyTyped="#yearRestriction" prefHeight="25.0" prefWidth="56.0" promptText="YYYY" />
                </children>
                <VBox.margin>
-                  <Insets left="28.0" />
+                  <Insets left="10.0" />
                </VBox.margin>
             </HBox>
             <HBox prefHeight="25.0" prefWidth="205.0">
@@ -77,31 +118,31 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField fx:id="addressText" prefHeight="25.0" prefWidth="252.0" promptText="Address ">
+                  <TextField fx:id="addressText" prefHeight="25.0" prefWidth="210.0" promptText="Address ">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </TextField>
                </children>
                <VBox.margin>
-                  <Insets left="28.0" />
+                  <Insets left="10.0" />
                </VBox.margin>
             </HBox>
-            <HBox prefHeight="25.0" prefWidth="117.0" spacing="15.0">
+            <HBox prefHeight="25.0" prefWidth="190.0">
                <children>
-                  <TextField fx:id="cityText" prefHeight="25.0" prefWidth="141.0" promptText="City">
+                  <TextField fx:id="cityText" prefHeight="25.0" prefWidth="115.0" promptText="City">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </TextField>
-                  <TextField fx:id="stateText" prefHeight="25.0" prefWidth="89.0" promptText="State">
+                  <TextField fx:id="stateText" prefHeight="26.0" prefWidth="86.0" promptText="State">
                      <HBox.margin>
                         <Insets left="8.0" />
                      </HBox.margin>
                   </TextField>
                </children>
                <VBox.margin>
-                  <Insets left="116.0" />
+                  <Insets left="98.0" />
                </VBox.margin>
             </HBox>
             <HBox prefHeight="25.0" prefWidth="178.0" spacing="28.0">
@@ -121,7 +162,7 @@
                   </TextField>
                </children>
                <VBox.margin>
-                  <Insets left="28.0" />
+                  <Insets left="10.0" />
                </VBox.margin>
             </HBox>
             <HBox prefHeight="25.0" prefWidth="162.0" spacing="28.0">
@@ -141,7 +182,7 @@
                   </TextField>
                </children>
                <VBox.margin>
-                  <Insets left="28.0" />
+                  <Insets left="10.0" />
                </VBox.margin>
             </HBox>
             <HBox prefHeight="25.0" prefWidth="184.0">
@@ -161,7 +202,7 @@
                   </TextField>
                </children>
                <VBox.margin>
-                  <Insets left="28.0" />
+                  <Insets left="10.0" />
                </VBox.margin>
             </HBox>
             <HBox prefHeight="25.0" prefWidth="198.0" spacing="5.0">
@@ -189,12 +230,12 @@
                   </RadioButton>
                </children>
                <VBox.margin>
-                  <Insets left="28.0" />
+                  <Insets left="10.0" />
                </VBox.margin>
             </HBox>
-            <HBox prefHeight="25.0" prefWidth="198.0" spacing="5.0">
+            <HBox layoutX="20.0" layoutY="330.0" prefHeight="25.0" prefWidth="198.0" spacing="5.0">
                <children>
-                  <Label prefHeight="25.0" prefWidth="69.0" text="Position:">
+                  <Label prefHeight="25.0" prefWidth="69.0" text="Admin:">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -202,18 +243,70 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField fx:id="positionText" promptText="Role" />
+                  <RadioButton mnemonicParsing="false" text="Yes">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="adminTG" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="No" toggleGroup="$adminTG">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </RadioButton>
                </children>
                <VBox.margin>
-                  <Insets left="28.0" />
+                  <Insets left="10.0" />
                </VBox.margin>
+            </HBox>
+            <HBox layoutX="20.0" layoutY="430.0" prefHeight="25.0" prefWidth="198.0" spacing="5.0">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="submitButton" mnemonicParsing="false" onAction="#submitInfo" text="Create">
+                     <HBox.margin>
+                        <Insets left="225.0" />
+                     </HBox.margin></Button>
+               </children>
             </HBox>
          </children>
          <padding>
-            <Insets left="40.0" top="50.0" />
+            <Insets top="20.0" />
          </padding>
       </VBox>
-      <Button fx:id="backButton" layoutX="164.0" layoutY="454.0" mnemonicParsing="false" onAction="#showMainMenu" text="Back" />
-      <Button layoutX="246.0" layoutY="454.0" mnemonicParsing="false" onAction="#submitInfo" text="Submit" />
+      <TableView fx:id="userView" layoutX="315.0" layoutY="57.0" prefHeight="387.0" prefWidth="519.0">
+        <columns>
+          <TableColumn fx:id="userCol1" prefWidth="75.0" text="User ID" />
+          <TableColumn fx:id="userCol2" prefWidth="81.0" text="Password" />
+            <TableColumn fx:id="userCol3" text="Name" />
+            <TableColumn fx:id="userCol4" text="Date of Birth" />
+            <TableColumn fx:id="userCol5" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="userCol6" prefWidth="75.0" text="Gender" />
+            <TableColumn fx:id="userCol7" prefWidth="75.0" text="Admin" />
+        </columns>
+      </TableView>
+      <HBox layoutX="486.0" layoutY="14.0" prefHeight="34.0" prefWidth="325.0">
+         <children>
+            <Label prefHeight="34.0" prefWidth="91.0" text="Delete User:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="deleteText">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="searchButton" mnemonicParsing="false" onAction="#search" onMouseClicked="#buttonClicked" text="Search">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Button fx:id="deleteButton" layoutX="792.0" layoutY="461.0" mnemonicParsing="false" onAction="#delete" text="Delete" />
    </children>
 </AnchorPane>

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: white;" stylesheets="@registerdoctor.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Health.RegisterDoctorController">
+<AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: white;" stylesheets="@registerdoctor.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Health.ReigsterPatientController">
    <children>
       <VBox prefHeight="454.0" prefWidth="500.0" spacing="15.0">
          <children>
@@ -187,22 +187,6 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </RadioButton>
-               </children>
-               <VBox.margin>
-                  <Insets left="28.0" />
-               </VBox.margin>
-            </HBox>
-            <HBox prefHeight="25.0" prefWidth="198.0" spacing="5.0">
-               <children>
-                  <Label prefHeight="25.0" prefWidth="69.0" text="Position:">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </Label>
-                  <TextField fx:id="positionText" promptText="Role" />
                </children>
                <VBox.margin>
                   <Insets left="28.0" />
